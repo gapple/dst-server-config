@@ -1,0 +1,10 @@
+[Unit]
+Description=Watch for Don't Starve application update
+Requires=network-online.target
+
+[Path]
+PathChanged=/home/dst/.steam/SteamApps/common/Don't Starve Together Dedicated Server/version.txt
+Unit=dst_restart.service
+
+[Install]
+WantedBy=paths.target

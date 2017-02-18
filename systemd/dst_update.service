@@ -1,0 +1,8 @@
+[Unit]
+Description=Check for Don't Starve Application Updates
+Requires=network-online.target
+
+[Service]
+User=dst
+WorkingDirectory=/home/dst
+ExecStart=/usr/games/steamcmd +login anonymous +app_update 343050 validate +quit

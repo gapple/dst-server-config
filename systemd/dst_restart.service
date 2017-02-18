@@ -1,0 +1,10 @@
+[Unit]
+Description=Restart Don't Starve servers
+Requires=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl stop dst_master.service
+ExecStart=/bin/systemctl stop dst_caves.service
+ExecStart=/bin/systemctl start dst_master.service
+ExecStart=/bin/systemctl start dst_caves.service

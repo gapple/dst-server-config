@@ -1,0 +1,12 @@
+[Unit]
+Description=Check for Don't Starve Application updates
+Requires=network-online.target
+
+[Timer]
+# Daily at 9am
+OnCalendar=*-*-* 09:00:00
+Persistent=True
+Unit=dst_update.service
+
+[Install]
+WantedBy=timers.target
